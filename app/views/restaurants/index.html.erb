@@ -1,0 +1,13 @@
+<h1 class="mx-5 mt-3">Restaurant list</h1>
+
+<ul>
+  <% @restaurants.each do |restaurant| %>
+    <div class="card-product mt-3">
+      <img src="https://media.cntraveler.com/photos/6411f8a3fb07ce6400b7dc5d/master/w_1920%2Cc_limit/Batea_MG_3395.JPG" />
+      <div class="card-product-infos">
+        <h2><%= link_to restaurant.name, restaurant_path(restaurant), class: "text-decoration-none text-dark"  %></h2>
+        <p><%= restaurant.address %>  |  <%= restaurant.category  %></p>
+      </div>
+    </div>
+  <% end %>
+</ul>
